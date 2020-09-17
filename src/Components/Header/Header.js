@@ -1,6 +1,14 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import { AppBar, Toolbar, Menu, MenuItem, Button } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
+import {
+  AppBar,
+  Toolbar,
+  Menu,
+  MenuItem,
+  Button,
+  Typography,
+} from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 
@@ -34,6 +42,11 @@ const Header = (props) => {
         >
           <MenuIcon />
         </IconButton>
+        <Typography variant="h6" className={classes.title} component="div">
+          <NavLink to={routes.ADD_POSTS} className={classes.menuItem}>
+            Add News
+          </NavLink>
+        </Typography>
         <div>
           <Menu
             id="menu-appbar"

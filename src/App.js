@@ -5,6 +5,7 @@ import Layout from "./Components/Layout/Layout";
 import News from "./Pages/News/News";
 import NewsDetails from "./Pages/NewsDetails/NewsDetails";
 import SignIn from "./Pages/SignUpForm/SignUpForm";
+import FormInput from "./Pages/FormInput/FormInput";
 
 import routes from "./routes";
 
@@ -12,10 +13,10 @@ const App = () => (
   <Layout>
     <Switch>
       <Route exact path={routes.POSTS} component={News}></Route>
-      <Route path={routes.POSTS_DETAILS} component={NewsDetails}></Route>
-      <Route path={routes.SIGN_IN} component={SignIn}></Route>
-      {/* <Route exact path={routes.HOME} component={HomePage}></Route>
-      <Route path={routes.MOVIE} component={MovieDetailsPage}></Route>
+      <Route exact path={routes.POSTS_DETAILS} component={NewsDetails}></Route>
+      <Route exact path={routes.SIGN_IN} component={SignIn}></Route>
+      <Route path={routes.ADD_POSTS} component={FormInput}></Route>
+      {/* <Route path={routes.MOVIE} component={MovieDetailsPage}></Route>
       <Route path={routes.SEARCH_MOVIES} component={MoviesPage}></Route>
       <Route component={NotFound} /> */}
     </Switch>
